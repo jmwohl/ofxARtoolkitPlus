@@ -109,7 +109,7 @@ void ofxARToolkitPlus::setup(int w, int h, string camParamFile, string multiFile
 }
 
 
-void ofxARToolkitPlus::setUndistortionMode(int nMode) {
+void ofxARToolkitPlus::setUndistortionMode(ofxARToolkitPlus::UNDIST_MODE nMode) {
 	switch (nMode) {
 		case 0:
 			tracker->setUndistortionMode(ARToolKitPlus::UNDIST_NONE);

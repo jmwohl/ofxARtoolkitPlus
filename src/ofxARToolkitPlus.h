@@ -7,14 +7,16 @@
 // Based on the type of marker
 #define BORDER_SCALE 1.25
 
-
-
 class ofxARToolkitPlus  {
 
 	public:	
 
 	ofxARToolkitPlus();
 	~ofxARToolkitPlus();
+    
+    enum UNDIST_MODE {
+        UNDIST_NONE, UNDIST_STD, UNDIST_LUT
+    };
 	
 	///////////////////////////////////////////
 	// SETUP
@@ -45,7 +47,7 @@ class ofxARToolkitPlus  {
 	void setup(int w, int h, string camParamFile, string multiFile, int maxImagePatterns = 8, int pattWidth = 6, int pattHeight = 6, int pattSamples = 6, int maxLoadPatterns = 0);
 
 
-	void setUndistortionMode(int nMode);
+	void setUndistortionMode(ofxARToolkitPlus::UNDIST_MODE nMode);
 	
 	///////////////////////////////////////////
 	// UPDATE
