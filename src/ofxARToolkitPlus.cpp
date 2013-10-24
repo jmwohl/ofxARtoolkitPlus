@@ -108,6 +108,21 @@ void ofxARToolkitPlus::setup(int w, int h, string camParamFile, string multiFile
 	
 }
 
+
+void ofxARToolkitPlus::setUndistortionMode(int nMode) {
+	switch (nMode) {
+		case 0:
+			tracker->setUndistortionMode(ARToolKitPlus::UNDIST_NONE);
+			break;
+		case 1:
+			tracker->setUndistortionMode(ARToolKitPlus::UNDIST_STD);
+			break;
+		case 2:
+			tracker->setUndistortionMode(ARToolKitPlus::UNDIST_LUT);
+	}
+}
+
+
 //--------------------------------------------------
 int ofxARToolkitPlus::update(unsigned char *pixels) {
 	return tracker->calc(pixels);

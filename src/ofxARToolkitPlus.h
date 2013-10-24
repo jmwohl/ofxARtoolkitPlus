@@ -44,6 +44,8 @@ class ofxARToolkitPlus  {
      */
 	void setup(int w, int h, string camParamFile, string multiFile, int maxImagePatterns = 8, int pattWidth = 6, int pattHeight = 6, int pattSamples = 6, int maxLoadPatterns = 0);
 
+
+	void setUndistortionMode(int nMode);
 	
 	///////////////////////////////////////////
 	// UPDATE
